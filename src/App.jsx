@@ -31,7 +31,7 @@ export default function App() {
     setisLoading(true);
     seterrorMsg('');
     try{
-      const endpoint = `${API_BASE_URL}everything?q=${encodeURIComponent(query || 'usa')}&language=en&pageSize=40&apiKey=${API_KEY}`;
+      const endpoint = `${API_BASE_URL}top-headlines?q=${encodeURIComponent(query || 'usa')}&language=en&pageSize=40&apiKey=${API_KEY}`;
       const response = await fetch(endpoint);
       if(!response.ok){
         throw new Error('Failed to fetch news');
